@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>slider</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+ </head>
+ <body>
+   <h2>Adaptive Height</h2>
+  				<div class="slider one-time">
+  					<div><h3>1</h3></div>
+  					<div><h3>2</h3><p>Look ma!</p></div>
+  					<div><h3>3</h3><p>Check<br/>this out!</p></div>
+  					<div><h3>4</h3><p>Woo!</p></div>
+  				</div>
+
+        <script>
+        $('.one-time').slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          adaptiveHeight: true
+        });
+        </script>
+ </body>
+</html>

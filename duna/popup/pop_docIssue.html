@@ -1,0 +1,112 @@
+﻿
+<article class="modal-content">
+	<h1 class="title">문서발급</h1>
+  <form action="" class="form scroll">
+    <fieldset>
+      <legend>문서발급 폼</legend>
+      <div class="form-group">
+          <label class="labelArea" for=" issue_type">발급유형</label>
+          <div class="inputWrap">
+            발급
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="labelArea" for="doc_type">문서형식</label>
+		  <div class="inputWrap">
+              <input type="radio" name="doc_type" id="doc_type" value="0">원본
+              <input type="radio" name="doc_type" value="1">변환본
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="labelArea" for="attachments_encrypt">첨부파일암호화</label>
+		  <div class="inputWrap">
+              <input type="radio" name="attachments_encrypt" id="attachments_encrypt"  value="0">암호
+              <input type="radio" name="attachments_encrypt" value="1">비암호화
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="labelArea" for="doc_index">발급대상문서</label>
+          <div class="inputWrap">
+             07070707070707070
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="labelArea" for="doc_id">대상문서 수</label>
+          <div class="inputWrap">
+            <input type="text" name="" id="doc_id">
+          </div>
+      </div>
+      <div class="form-group">
+          <span class="labelArea">수신자</span>
+          <div class="inputWrap2 barins">
+			<div class="filebox">
+				인증서
+			  <input class="upload-name width74" value="파일선택" disabled="disabled">
+			  <label for="ex_filename1" class="btn btn_attachAdd">찾아보기</label>
+			  <input type="file" id="ex_filename1" class="upload-hidden">
+			</div>
+			<div class="addUsers">
+				<p></p>
+			</div>
+          </div>
+      </div>
+	  <div class="form-group nobtm">
+          <span class="labelArea">첨부파일</span>
+          <div class="inputWrap2">
+			  <div class="filebox">
+				  첨부파일 검색
+			  	<input class="upload-name width65" value="파일선택" disabled="disabled">
+				<label for="ex_filename2" class="btn btn_attachAdd">찾아보기</label>
+				<input type="file" id="ex_filename2" class="upload-hidden">
+			  </div>
+			   <div class="filelistsbox">
+					<label class="textareaArea left first"><span>첨부된 파일</span><textarea name="" id=""></textarea></label>
+					<label class="textareaArea right"><span>발급할 파일</span><textarea name="" id="" cols="30" rows="10"></textarea></label>
+					<a href="#" class="btn_arrow left">첨부된 파일로 이동</a>
+					<a href="#" class="btn_arrow right">발급할 파일로 이동</a>
+					<p class="alert">* 발급할 문서를 선택하지 않은 경우에는 모든 파일을 발급합니다.</p>
+				</div>
+          </div>
+      </div>
+
+    </fieldset>
+  </form>
+  <div class="btnsArea">
+		<button type="button" class="btn red">확인</button>
+		<button type="button" class="btn">조회</button>
+  </div>
+</article>
+<script src="js/jquery.html5shiv.js"></script>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.ui.js"></script>
+<script src="js/script.js"></script>
+<!-- <script>
+$( document ).ready(function() {
+	var fileTarget01 = $('.filebox .upload-hidden01');
+	fileTarget01.on('change', function(){ // 값이 변경되면
+	    if(window.FileReader){ // modern browser
+	        var filename = $(this)[0].files[0].name;
+	     }else { // old IE
+	         var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+	    }
+	    // 추출한 파일명 삽입
+	    $(this).siblings('.upload-name').val(filename);
+		$(this).parents().find('.addUsers p').html(filename)
+	});
+
+	var fileTarget02 = $('.filebox .upload-hidden02');
+	fileTarget02.on('change', function(){ // 값이 변경되면
+	    if(window.FileReader){ // modern browser
+	        var filename = $(this)[0].files[0].name;
+	     }else { // old IE
+	         var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+	    }
+	    // 추출한 파일명 삽입
+	    $(this).siblings('.upload-name').val(filename);
+		$(this).parents().find('.addUsers p').html(filename)
+	});
+
+});
+
+</script> -->

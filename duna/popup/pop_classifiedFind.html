@@ -1,0 +1,90 @@
+﻿
+<article class="modal-content">
+	<h1 class="title">분류찾기</h1>
+
+	<div id="tap_box" class="poptab">
+	  <!-- 표준분류/ 업체별분류/ 마이폴더-->
+	  <div class="box_container" id="skipnav">
+		  <!-- 표준분류 -->
+		  <article class="tap_group three_tabs">
+			  <h3 class="tap_menu01 current">
+				  <a href="#none" title="표준분류 탭펼치기" class="current">표준분류</a>
+			  </h3>
+			  <div class="box_content_wrap">
+				  <div class="box_content wrap_table">
+  						<div>
+  							<article class="scroll">
+  								표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>
+								표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>
+								표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>
+								표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>
+								표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>표준트리폴더<br>
+
+  						    </article>
+  						</div>
+				  </div>
+				</div>
+		  </article>
+		  <!-- // 표준분류 -->
+		  <!-- 업체별분류 -->
+		  <article class="tap_group three_tabs">
+			  <h3 class="tap_menu02">
+				  <a href="#none" title="업체별분류 탭펼치기" class="">업체별분류</a>
+			  </h3>
+			  <div class="box_content_wrap" style="display:none;">
+				  <div class="box_content wrap_table">
+  					  <div>
+  						  <article class="scroll">
+  							  업체별분류 트리폴더<br>업체별분류 트리폴더<br>업체별분류 트리폴더<br>업체별분류 트리폴더<br>
+							  업체별분류 트리폴더<br>업체별분류 트리폴더<br>업체별분류 트리폴더<br>업체별분류 트리폴더<br>
+							  업체별분류 트리폴더<br>업체별분류 트리폴더<br>업체별분류 트리폴더<br>업체별분류 트리폴더<br>
+							  업체별분류 트리폴더<br>업체별분류 트리폴더<br>업체별분류 트리폴더<br>업체별분류 트리폴더<br>
+							  업체별분류 트리폴더<br>업체별분류 트리폴더<br>업체별분류 트리폴더<br>업체별분류 트리폴더<br>
+
+  						  </article>
+  					  </div>
+  				</div>
+			  </div>
+		  </article>
+		  <!-- // 업체별분류 -->
+		  <!-- 마이폴더 -->
+		  <article class="tap_group three_tabs">
+			  <h3 class="tap_menu03">
+				  <a href="#none" title="마이폴더 탭펼치기" class="">마이폴더</a>
+			  </h3>
+			  <div class="box_content_wrap" style="display:none;">
+				  <div class="box_content wrap_table">
+  					  <div>
+  						  <article class="scroll">
+  							  <span class="no-data">조회된 데이터가 없습니다.</span>
+  						  </article>
+  					  </div>
+  				</div>
+			  </div>
+		  </article>
+		  <!-- // 마이폴더 -->
+	  </div>
+	  <!-- // 표준분류/ 업체별분류/ 마이폴더 -->
+
+	  </div>
+
+	<div class="btnsArea">
+		<button href="" class="btn red">확인</button>
+		<button href="" class="btn red">마이폴더 이동</button>
+  	</div>
+</article>
+
+<script>
+$('.tap_group > h3 > a').click(function(e) {
+  $('.tap_group').removeClass("on");
+  $('.tap_group > div').hide();
+  $('.tap_group > h3 > div').hide();
+  $('.tap_group .current').removeClass("current");
+  $(this).parent().siblings('div').show();
+  $(this).parent().siblings('a').show();
+  $(this).parent().parent().addClass('current');
+  $(this).parent().addClass('current');
+  maxHeight();
+  e.preventDefault();
+}).eq(0).addClass('current');
+</script>

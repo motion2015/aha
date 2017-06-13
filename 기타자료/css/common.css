@@ -1,0 +1,129 @@
+@charset 'utf-8';
+@charset 'utf-8';
+/*
+@font-face {
+  font-family: 'HanaB';
+	font-style:normal;
+	font-weight:normal;
+  src:url('../common/fonts/HanaB.woff') format('woff'),
+  url('../common/fonts/HanaB.otf') format('opentype');
+}
+@font-face {
+  font-family: 'HanaCM';
+	font-style:normal;
+	font-weight:normal;
+  src:url('../common/fonts/HanaCM.woff') format('woff'),
+  url('../common/fonts/HanaCM.otf') format('opentype');
+}
+*/
+
+
+@font-face {
+  font-family: 'HanaB';
+	font-style:normal;
+	font-weight:normal;
+    src:url('../common/fonts/HanaB.eot');
+	src:url('../common/fonts/HanaB.eot?#iefix') format('embedded-opentype'),
+  url('../common/fonts/HanaB.woff') format('woff'),
+  url('../common/fonts/HanaB.otf') format('opentype');
+}
+@font-face {
+  font-family: 'HanaCM';
+	font-style:normal;
+	font-weight:normal;
+    src:url('../common/fonts/HanaCM.eot');
+	src:url('../common/fonts/HanaCM.eot?#iefix') format('embedded-opentype'),
+  url('../common/fonts/HanaCM.woff') format('woff'),
+  url('../common/fonts/HanaCM.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Hana_Gothic_60';
+	font-style:normal;
+	font-weight:normal;
+    src:url('../common/fonts/HANAGOTHICPRO765.eot');
+	src:url('../common/fonts/HANAGOTHICPRO765.eot?#iefix') format('embedded-opentype'),
+    url('../common/fonts/HANAGOTHICPRO765.woff') format('woff'),
+	url('../common/fonts/HANAGOTHICPRO765.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Hana_Gothic_80';
+	font-style:normal;
+	font-weight:normal;
+    src:url('../common/fonts/HANAGOTHICPRO785.eot');
+	src:url('../common/fonts/HANAGOTHICPRO785.eot?#iefix') format('embedded-opentype'),
+	url('../common/fonts/HANAGOTHICPRO785.woff') format('woff'),
+	url('../common/fonts/HANAGOTHICPRO785.otf') format('opentype');
+}
+
+/* reset CSS */
+* {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; box-sizing:border-box;}
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {margin:0; padding:0; border:0; vertical-align:baseline;}
+html {overflow-y:scroll;
+  /*font-smoothing:antialiased;*/
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+body { font-family:'Hana_Gothic_60','맑은 고딕','Malgun Gothic',sans-serif;color:#333;line-height:1.5; font-size:12px;}
+ol, ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;}
+table {border-collapse:collapse; border-spacing:0;}
+table caption {display:none;}
+a {color:#333; text-decoration:none;}
+a:hover,a:focus {}
+.footlink{color:#7d7d7d !important;}
+/* //reset CSS */
+
+
+
+html,
+body {width: 100%;height: 100%;}
+body {position: relative;}
+
+
+
+img,fieldset,iframe {border: 0 none;}
+form legend,fieldset legend,hr {display: none;}
+em,address {font-style: normal;}
+input[type='text'] {
+	-webket-ime-mode: active !important;
+	-moz-ime-mode: active !important;
+	-ms-ime-mode: active !important;
+	ime-mode: active !important;
+}
+input[type='checkbox'],input[type='radio'] {margin-right: 3px;margin-top: -2px;vertical-align: middle;}
+
+table {width: 100%;table-layout: fixed;}
+table caption {display: block;overflow:hidden;position: absolute;top: 0;left: 0;width: 1px;height: 1px;}
+table th {text-align: center;}
+button {border: 0;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+small{font-size:inherit !important;}
+label{display: inline-block;}
+input,textarea,keygen,select,button{font-size: 12px !important;}
+
+.btn{cursor: pointer; font-family:'Hana_Gothic_60','맑은 고딕','Malgun Gothic',sans-serif;color: #fff;background-color: #666;padding:3px 8px 5px;}
+.btn:hover,.btn:focus,.btn.focus {color: #fff; background-color: #929292; text-decoration: none;}
+.grey{color: #fff; background-color: #929292;margin-left:3px}
+.grey:hover,.grey:focus,.grey.focus{color: #fff;background-color: #666}
+.red {color: #fff; background-color: #ec1767;}
+.btn.large{padding: 20px 95px;margin-top: 20px;}
+.red:hover,.red:focus,.red:active,.open > .dropdown-toggle.red {color: #fff; background-color: #ea75a1 !important;}
+.wide{padding:3px 63px 3px}
+input[type="radio"],input[type="checkbox"] {
+  margin: 0px 3px 0px 6px !important; /* parkms */
+  margin-top: 1px;
+  line-height: normal;
+}
+/*  ====================================================   */
+.layoutWrapL{float:left;height:230px;}
+.layoutWrapR{float:right;height:230px;}
+.floatR{float:right}
+.floatL{float:left}
+.imgbrd{border:4px solid #cde4e4;}
+.mrgTop300{margin-top:300px;}
+.mrgTop60{margin-top:50px;}
+.mrgLft20{margin-left:20px !important;}

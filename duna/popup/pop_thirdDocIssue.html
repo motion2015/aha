@@ -1,0 +1,114 @@
+﻿
+<article class="modal-content">
+	<h1 class="title">문서발급</h1>
+  <form action="" class="form scroll">
+    <fieldset>
+      <legend>문서발급 폼</legend>
+      <div class="form-group">
+          <label class="labelArea">발급유형</label>
+          <div class="inputWrap">
+            3자발급
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="labelArea" for="doc_type">문서형식</label>
+		  <div class="inputWrap">
+              <input type="radio" name="doc_type" id="doc_type" value="0">원본
+              <input type="radio" name="doc_type" value="1">변환본
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="labelArea" for="doc_index">발급대상문서</label>
+          <div class="inputWrap">
+             07070707070707070
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="labelArea" for="doc_id">대상문서 수</label>
+          <div class="inputWrap">
+            <input type="text" name="" id="doc_id">
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="labelArea" for="doc_aipId">수신자</label>
+          <div class="inputWrap2">
+			  <label class="brdbottom">메 일<input type="text" class="width71"name="" id="doc_aipId"></label>
+			<div class="filebox">
+				인증서
+			  <input class="upload-name width74" value="파일선택" disabled="disabled">
+			  <!-- <label for="ex_filename"><a class="btn btn_attachAdd2">찾아보기</a></label> -->
+			  <label for="ex_filename" class="btn btn_attachAdd2">찾아보기</label>
+			  <input type="file" id="ex_filename" class="upload-hidden">
+			</div>
+			<div class="btnsArea2 brdtop">
+		  	<a class="btn red">추가</a>
+		  	<a class="btn">삭제</a>
+		    </div>
+			<table class="tType06" id="addFile" summary="번호,증명서 일련번호,타입,문서명,발급일시,만료일시,폐지여부,요청자">
+			  <caption>증명서 조회 리스트</caption>
+			  <colgroup>
+				<col width="20%">
+				<col width="80%">
+			  </colgroup>
+			  <thead>
+				  <tr>
+					<th rowspan="2"><input type="checkbox" name="chk_doc_repeal" value="0"></th>
+					<th>Email</th>
+				  </tr>
+				  <tr>
+					<th colspan="2">인증서</th>
+				  </tr>
+			  </thead>
+			  <tbody>
+				  <tr>
+  				  <td rowspan="2" class="aligncnt"><input type="checkbox" name="chk_doc_repeal" value="0"></td>
+  				  <td>docu22@hanaseda.com</td>
+  				</tr>
+  				<tr>
+  				  <td colspan="2">122455454545</td>
+  				</tr>
+			  </tbody>
+			</table>
+
+          </div>
+      </div>
+	  <div class="form-group nobtm">
+          <label class="labelArea" for="doc_aipId">첨부파일</label>
+          <div class="inputWrap2">
+			<label class="textareaArea left first"><span>첨부된 파일</span><textarea name="" id=""></textarea></label>
+			<label class="textareaArea right"><span>발급할 파일</span><textarea name="" id="" cols="30" rows="10"></textarea></label>
+			<a href="#" class="btn_arrow left">첨부된 파일로 이동</a>
+			<a href="#" class="btn_arrow right">발급할 파일로 이동</a>
+			<p class="alert">* 발급할 문서를 선택하지 않은 경우에는 모든 파일을 발급합니다.</p>
+          </div>
+      </div>
+
+    </fieldset>
+  </form>
+  <div class="btnsArea">
+		<button type="button" class="btn red">확인</button>
+		<button type="button" class="btn">조회</button>
+  </div>
+</article>
+<script>
+$( document ).ready(function() {
+
+
+	var fileTarget = $('.filebox .upload-hidden');
+	console.log("hidden11"+ $('.filebox .upload-hidden').length);
+	fileTarget.on('change', function(){ // 값이 변경되면
+//alert(55555);
+		//console.log($(this));
+	    if(window.FileReader){ // modern browser
+	        var filename = $(this)[0].files[0].name;
+	     }else { // old IE
+	         var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+	    }
+	    // 추출한 파일명 삽입
+		console.log($(this));
+		 console.log($(this).siblings('.upload-name').length);
+	    $(this).siblings('.upload-name').val(filename);
+	});
+});
+
+</script>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi">-->
+<title>하나아이앤에스 :: 문서 검색</title>
+<link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/layout_sub.css" media="all">
+<link rel="stylesheet" href="css/jquery-ui.css" media="all">
+<!--[if IE]>
+  <script src="js/jquery.html5shiv.js"></script>
+<![endif]-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.ui.js"></script>
+<script src="js/script.js"></script>
+<script src="js/datepicker-fr.js"></script>
+</head>
+<body>
+  <!-- skip Navigation -->
+  <div id="box_skip">
+    <h2 class="blind">Skip navigation</h2>
+    <ul>
+      <li><a href="#skipnav">본문 바로가기</a></li>
+      <li><a href="#navFirst">주 메뉴 바로가기</a></li>
+    </ul>
+  </div>
+  <!-- //skip Navigation -->
+<div class="container">
+    <div class="header"><h1><a href="index.html" class="home">home</a></h1></div>
+    <div id="main_wrap">
+       <section class="page_info">
+            <nav id="sub_nav" class="sub_visual_02">
+                <span class="icon bar"></span>
+                <h2 class="menu_title menu02">전자문서 등록</h2>
+                <ul class="menu_sub">
+                    <li><a href="certified_login.html">공인인증서 로그인</a></li>
+                    <li><a href="archivingdoc_register.html">전자문서등록</a></li>
+                    <li><a class="selected" href="archivingdoc_docSearch.html">문서검색</a></li>
+                    <li><a href="archivingdoc_periodExtension.html">기간연장</a></li>
+                    <li><a href="archivingdoc_periodExtension.html">권한관리</a></li>
+                    <li><a href="archivingdoc_rightsmanage.html">분류관리</a></li>
+                    <li><a href="archivingdoc_searchHistory.html">이력조회</a></li>
+                    <li><a href="archivingdoc_totalTransferApply.html">전체문서이관신청</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="main_content" id="skipnav">
+            <h4 class="title nospace">문서 검색</h4>
+           <!--증명서 조회-->
+            <form action="" class="form">
+              <fieldset>
+                <legend>문서 검색</legend>
+                <div class="form-group">
+                    <label class="labelArea" for="search_object">검색대상</label>
+                    <div class="inputWrap">
+                      <input type="text" name="" class="inp_xlarge" id="search_object">
+                      <a class="layerpopup btn" data-popuprul="popup/pop_classifiedFind.html" href="popup/pop_classifiedFind.html">분류검색</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="labelArea" for="registrant">등록자</label>
+                    <div class="inputWrap">
+                      <input type="text" name="" id="registrant">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="labelArea" for="doc_title">제목</label>
+                    <div class="inputWrap">
+                      <input type="text" name="" id="doc_title">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="labelArea" for="doc_index">색인</label>
+                    <div class="inputWrap">
+                      <input type="text" name="" id="doc_index">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="labelArea" for="doc_id">DOC ID</label>
+                    <div class="inputWrap">
+                      <input type="text" name="" id="doc_id">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="labelArea" for="doc_aipId">AIP ID</label>
+                    <div class="inputWrap">
+                      <input type="text" name="" id="doc_aipId">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="labelArea" for="doc_filename">파일명</label>
+                    <div class="inputWrap">
+                      <input type="text" name="" id="doc_filename">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="labelArea" for="from_usage">등록일</label>
+                    <div class="inputWrap">
+                      <input type="text" class="smalldate" id="from_regi" maxlength="10">
+                      <i class="dash">-</i> <input type="text" class="smalldate" id="to_regi" maxlength="10">
+                      <a href="" class="btn grey" role="button">최근 1주일</a>
+                      <a href="" class="btn grey" role="button">최근 1개월</a>
+                    </div>
+                </div>
+                <div class="form-group last">
+                    <label class="labelArea" for="from_usage">보관만료일</label>
+                    <div class="inputWrap theight70">
+                      <input type="text" class="smalldate" id="from_expire" maxlength="10">
+                      <i class="dash">-</i> <input type="text" class="smalldate" id="to_expire" maxlength="10">
+                      <a href="" class="btn grey" role="button">최근 1주일</a>
+                      <a href="" class="btn grey" role="button">최근 1개월</a>
+                      <p>
+                        <a href="" class="btn posibtn wide" role="button">조회</a>
+                      </p>
+                    </div>
+                </div>
+
+                <!-- <div class="btnsArea">
+                  <button type="submit" class="btn red">등록</button>
+                </div> -->
+              </fieldset>
+            </form>
+
+            <table class="tType02" summary="번호, 기능, 제목, 등록자, 등록일, 만료일, 첨부, 총크기">
+              <caption>증명서 조회 리스트</caption>
+              <colgroup>
+                <col width="6%">
+                <col width="6%">
+                <col width="30%">
+                <col width="8%">
+                <col width="14%">
+                <col width="14%">
+                <col width="6%">
+                <col width="8%">
+              </colgroup>
+              <thead>
+                <th>번호</th>
+                <th>기능</th>
+                <th>제목</th>
+                <th>등록자</th>
+                <th>등록일</th>
+                <th>만료일</th>
+                <th>첨부</th>
+                <th>총크기</th>
+              </thead>
+              <tbody>
+                <!-- <tr>
+                  <td colspan="8">조회된 데이타가 없습니다.</td>
+                </tr> -->
+                <tr>
+                  <td>1</td>
+                  <td class="posrelative"><a href="#" class="link_tooltip"><i class="docicon"></i></a>
+                      <div class="tooltip">
+                        <a class="modali btn" data-urli="popup/pop_reading.html" href="popup/pop_reading.html" target="_blank" title="열람 새창열기">열람</a>
+                        <a class="layerpopup btn" data-popuprul="popup/pop_docIssue.html" href="popup/pop_docIssue.html" target="_blank" title="발급 새창열기">발급</a>
+                        <a class="layerpopup btn" data-popuprul="popup/pop_thirdDocIssue.html" href="popup/pop_thirdDocIssue" target="_blank" title="3자 발급 새창열기">3자 발급</a>
+                        <a class="layerpopup btn" data-popuprul="popup/pop_disposal.html" href="popup/pop_disposal.html" target="_blank" title="폐기 새창열기">폐기</a>
+                        <a class="layerpopup btn" data-popuprul="popup/pop_bizFind.html" href="popup/pop_bizFind.html" target="_blank" title="사업체 찾기 새창열기">사업체 찾기</a>
+                        <a class="layerpopup btn" data-popuprul="popup/pop_disposal.html" href="popup/pop_disposal.html" target="_blank" title="사업체 찾기 새창열기">폐기</a>
+                        <a class="btn close" href="#">닫기</a>
+                      </div>
+                  </td>
+                  <td>Socket00001.20170310070202</td>
+                  <td>권진영</td>
+                  <td>2017-03-10</td>
+                  <td>2017-03-10</td>
+                  <td>1</th>
+                  <td>0.5KB</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paging">
+              <span class="pbtn"><a href="#first" class="first">목록 처음으로 이동</a></span>
+              <span class="pbtn"><a href="#prev" class="prev">이전 페이지로 이동</a></span>
+              <span class="num">
+                <a href="docSearchList.html?page=1" class="on">1</a>
+                <a href="docSearchList.html?page=2">2</a>
+                <a href="docSearchList.html?page=3">3</a>
+                <a href="docSearchList.html?page=4">4</a>
+                <a href="docSearchList.html?page=5">5</a>
+              </span>
+              <span class="pbtn"><a href="" class="next">다음 페이지로 이동</a></span>
+              <span class="pbtn"><a href="" class="last">목록 마지막으로 이동</a></span>
+            </div>
+
+
+
+        </section>
+      </div>
+      </div>
+      <footer class="footer">
+      <div class=wrapper>
+          <div class="logo_Wrap">
+               <h1 class="blind">하나아이앤에스 회사 정보</h1>
+              <a href="list_new.html"><img src="images/logo.png" class="logo" alt="하나아이앤에스 문서센터 로고"></a>
+          </div>
+          <div class="info">
+              <small>copyright 하나아이앤에스 공인전자문서센터 .INC.All right.</small>
+              <address>경기도 고양시 일산동구 장항동 869번지 SK M-City 오피스동 3층 하나금융그룹 전자문서센터</address>
+              <p class="contact">
+                  <span class="icon tel">031-000-0000</span>
+                  <span class="icon fex">031-000-1111</span>
+                  <span class="icon message">master@rocomo.com</span>
+              </p>
+              <p class="privacy">
+                <a href="#">개인정보처리방침</a>
+                <a href="#">개인정보취급방침</a>
+                <a href="#">영상정보처리기기 운영 및 관리 방침</a>
+                <a href="sitemap.html">사이트 맵</a>
+              </p>
+          </div>
+      </div>
+      </footer>
+      <script>
+      $( function() {
+          $('#from_expire').datepicker();
+          $('#to_expire').datepicker();
+          $('#from_regi').datepicker();
+          $('#to_regi').datepicker();
+      } );
+      </script>
+    <!-- layer popup  -->
+      <div class="layer">
+      	<div class="bg"></div>
+      	<div id="layer2" class="pop-layer">
+      		<div class="pop-container">
+      			<div class="pop-conts">
+      				<!--content //-->
+
+
+      				<!--// content-->
+      			</div>
+            <a href="#" class="cloasebtn">Close</a>
+      		</div>
+      	</div>
+      </div>
+      <!-- layer popup -->
+      </body>
+
+      </html>
