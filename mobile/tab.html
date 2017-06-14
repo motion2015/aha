@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" cont
+ent="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi">
+  <title>Hana Docu 주요서비스::하나아이앤에스</title>
+  <script src="js/jquery.js"></script>
+
+  <script>
+
+  $(function() {
+    /* 탭메뉴  */
+    $('.tap_box .tap_group > h3 > a').click(function(e) {
+      e.preventDefault();
+      $(this).closest('.tap_group').siblings().find('.box_content_wrap').hide();
+      $(this).parent().parent().siblings().find('h3').removeClass('current');
+      $(this).parent().siblings('div').show();
+      $(this).parent().addClass('current');
+    }).eq(0).addClass('current');
+
+});
+
+
+  </script>
+  <style>
+  /* 탭메뉴 */
+  .tap_box {position: relative;	width: auto;	max-width: 791px;	min-height: 100px;	margin: 0 auto;}
+  .tap_box .box_container{float: left;	z-index: 100;	background: #fff;width:100%}
+  .tap_box article > div{padding: 80px 0px 0 0px;}
+  .tap_box article h3 {position: absolute;	top: 15px;	font-size: 12px;    border: 1px solid #dedede;
+    border-left: none;
+    border-right: none;}
+  .tap_box article h3 a {
+    font-family:'Hana_Gothic_80','맑은 고딕','Malgun Gothic',sans-serif;
+  	display: block;	padding: 0 11px;	height: 30px;	line-height: 30px;	text-align: center;
+  }
+  .tap_group{overflow: hidden;}
+  .tap_group h3{width: 25%;	background-color: #fff;}
+  .tap_group.two_tabs h3{width: 50%;}
+  .tap_group h3.current{	padding: 0;	z-index:999}
+  .tap_group h3 a{color:#8e8e8e}
+  .tap_group h3.current a{color:#ec1767}
+  .tap_menu01{left:0%}
+  .tap_menu02{left:25%}
+  .tap_menu03{left:50%}
+  .tap_menu04{left:75%}
+  .two_tabs .tap_menu02{left:50% !important}
+
+
+
+  </style>
+
+</head>
+<body>
+  <!-- skip Navigation -->
+
+  <!-- //skip Navigation -->
+<div class="container">
+
+    <div id="main_wrap">
+       <!-- 좌측 메뉴-->
+
+        <!-- //좌측 메뉴-->
+        <section class="main_content" id="skipnav">
+          <div class="tap_box">
+          <div class="box_container" id="skipnav">
+
+              <article class="tap_group two_tabs">
+                  <h3 class="tap_menu01 current">
+                      <a href="#none" title="KB국민은행" class="">KB국민은행</a>
+                  </h3>
+                  <div class="box_content_wrap">
+                    <div class="box_content"> 11111111111111 </div>
+                  </div>
+              </article>
+              <article class="tap_group two_tabs">
+                  <h3 class="tap_menu02">
+                      <a href="#none" title="전자화문서 보관 탭펼치기" class="">일반</a>
+                  </h3>
+                  <div class="box_content_wrap" style="display:none;">
+                    <div class="box_content">22222222222222 </div>
+                  </div>
+              </article>
+
+          </div>
+
+          </div>
+          <!-- tap_box -->
+          <div class="tap_box">
+          <div class="box_container" id="skipnav">
+            <article class="tap_group">
+                <h3 class="tap_menu01 current">
+                    <a href="#none" title="지점명" class="">지점명</a>
+                </h3>
+                <div class="box_content_wrap">
+                  <div class="box_content">1111111111111 </div>
+                </div>
+            </article>
+            <article class="tap_group">
+                <h3 class="tap_menu02">
+                    <a href="#none" title="기타2" class="">기타2</a>
+                </h3>
+                <div class="box_content_wrap"  style="display:none;">
+                  <div class="box_content">2222    </div>
+                </div>
+            </article>
+
+              <article class="tap_group">
+                  <h3 class="tap_menu03">
+                      <a href="#none" title="기타23" class="">기타3</a>
+                  </h3>
+                  <div class="box_content_wrap" style="display:none;">
+                    <div class="box_content">33333333  </div>
+                  </div>
+              </article>
+
+              <article class="tap_group">
+                  <h3 class="tap_menu04">
+                      <a href="#none" title="기타4" class="">기타4</a>
+                  </h3>
+                  <div class="box_content_wrap" style="display:none;">
+                    <div class="box_content">444</div>
+                  </div>
+              </article>
+
+          </div>
+
+          </div>
+          <!-- tap_box -->
+
+
+
+        </section>
+    </div>
+    <!-- //main_wrap -->
+</div>
+
+
+</body>
+
+</html>
