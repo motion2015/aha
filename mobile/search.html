@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" cont
+ent="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi">
+  <title>Hana Docu 주요서비스::하나아이앤에스</title>
+  <script src="js/jquery.js"></script>
+
+  <script>
+
+  $(function() {
+    /* 탭메뉴  */
+    $('.tap_box .tap_group > h3 > a').click(function(e) {
+      e.preventDefault();
+      $(this).closest('.tap_group').siblings().find('.box_content_wrap').hide();
+      $(this).parent().parent().siblings().find('h3').removeClass('current');
+      $(this).parent().siblings('div').show();
+      $(this).parent().addClass('current');
+    }).eq(0).addClass('current');
+
+});
+
+
+  </script>
+  <style>
+  .mcom_wrap.sm .mcom_sch .m_head_inparea .inpbx {
+      border-color: #cf2219;
+      background: #cf2219;}
+
+      .m_srharea_v2 .m_head_inparea .addr_ipbx .inpbx input {
+    height: 17px;
+    padding-top: 1px;
+    line-height: 17px;
+}
+
+.mcom_wrap.sm .sp_com_v2, .mcom_fixed.sm .sp_com_v2 {
+    background-image: url(images/com_v2/sp_sm_v2.png);
+}
+
+m_com.css:511
+.sp_com_v2 {
+    display: inline-block;
+    overflow: hidden;
+    background: url(images/com_v2/sp_ssg_v3.png) no-repeat 0 0;
+    background-size: 250px 250px;
+    line-height: 999px;
+    width: 30px;
+    height: 26px;
+    vertical-align: top;
+}
+
+.btn_search {
+    float: left;
+    width: 35px;
+    height: 35px;
+    background: url(images/btn_search_em.png) 0 0 no-repeat;
+    margin-left: -2px;
+}
+  </style>
+
+</head>
+<body>
+  <!-- skip Navigation -->
+
+  <!-- //skip Navigation -->
+<div class="container">
+
+    <div id="main_wrap">
+
+      <span class="inpbx">
+				<input type="text" id="inp_sch" name="query" autocomplete="off">
+				<label for="inp_sch"><span class="sp_com_v2 ico_srch"></span> 검색하기</label>
+			</span>
+      <div class="ip_search">
+      						<input id="query" name="query" type="text" title="검색어 입력" size="55" style="ime-mode:active;" autocomplete="off" value="">
+      						<input id="search_sub_txt" name="search_sub_txt" type="hidden" value="">
+      						<input id="search_ad_txt" name="search_ad_txt" type="hidden" value="[CJ]매실청 행사상품 2개↑구매 시 10%↓">
+      						<input id="search_ad_link" name="search_ad_link" type="hidden" value="/planshop/detail.ssg?dispCmptId=6000132548">
+      						<input name="target" type="hidden" value="all">
+      					</div>
+      <button title="검색" id="gnb_sch_input" class="btn_search"><span class="blind">검색</span></button>
+<input type="text" title="검색어 입력" class="ip" id="rescanText">
+<button type="submit" title="검색" class="btn_search">검색</button>
+
+
+
+    </div>
+    <!-- //main_wrap -->
+</div>
+
+
+</body>
+
+</html>

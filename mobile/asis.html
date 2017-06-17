@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="js/jquery.js"></script>
+
+
+<style>
+.recievebox{position: relative;
+    display: block;clear:both;
+}
+.sendId{position: absolute;
+    top: 0;
+    left: 10px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #dedede;
+    color: #f00;
+    line-height: 50px;
+    text-align: center;}
+.sendNic{position: absolute;
+    top: 0;
+    left: 65px;}
+    .recievebox .content{margin: 48px 60px 10px 64px;
+       border-radius: 0px 14px 27px 27px;
+       background-color: #dedede;
+       padding: 9px;
+       min-height: 32px;
+       display: inline-block;
+       width: 56%;}
+     .sendbox .content{float: right;
+        border-radius: 14px 0 27px 27px;
+        background-color: #dedede;
+        padding: 9px;
+        min-height: 32px;
+        display: inline-block;
+        width: 56%;}
+    .new{
+    position: absolute;
+    bottom: 45px;
+    right: 32px;}
+    .time{position: absolute;
+    bottom: 14px;
+    right: 6px;}
+
+</style>
+<body>
+ <p id="demo"></p>
+<div class="recievebox msg show_0">
+  <p class="sendId">강</p>
+  <p class="sendNic">강다솜 매니저님</p>
+  <p class="content">팀장님~ 리브똑똑 캐릭터디자인 메일로 보냈습니다.</p>
+  <span class="new">1</span>
+  <span class="time">오후 10:29</span>
+</div>
+<div class="sendbox msg show_1">
+  <p class="content">네~ 확인해볼게요^^</p>
+</div>
+<div class="recievebox msg show_2">
+  <p class="sendId">강</p>
+  <p class="sendNic">강다솜 매니저님</p>
+  <p class="content">두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지</p>
+  <span class="new">1</span>
+  <span class="time">오후 10:29</span>
+</div>
+<div class="sendbox msg show_3">
+  <p class="content">두번째 네~ 확인해볼게요^^</p>
+</div>
+<div class="recievebox msg show_4">
+  <p class="sendId">강</p>
+  <p class="sendNic">강다솜 매니저님</p>
+  <p class="content">세번째 보냄메세지세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지<</p>
+  <span class="new">1</span>
+  <span class="time">오후 10:29</span>
+</div>
+<div class="sendbox msg show_5">
+  <p class="content">세번째 네~ 확인해볼게요^^</p>
+</div>
+<div class="recievebox msg show_6">
+  <p class="sendId">강</p>
+  <p class="sendNic">강다솜 매니저님</p>
+  <p class="content">네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지</p>
+  <span class="new">1</span>
+  <span class="time">오후 10:29</span>
+</div>
+<div class="sendbox msg show_7">
+  <p class="content">네번째네~ 확인해볼게요^^</p>
+</div>
+<script>
+$( document ).ready(function() {
+      var messageLen = $('.msg').length;
+      for (var i=0;i<messageLen;i++){
+        setInterval(function(){
+          with({num:i}){
+            $('.show_'+i).css('display','block');
+           console.log($('.show_'+i))
+          }
+
+        }, 1000);
+}
+
+
+});
+
+</script>
+</body>
+</html>
