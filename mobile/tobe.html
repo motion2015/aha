@@ -17,7 +17,7 @@
     height: 50px;
     border-radius: 100%;
     background-color: #dedede;
-    color: #f00;
+    color: purple;
     line-height: 50px;
     text-align: center;}
 .sendNic{position: absolute;
@@ -40,12 +40,15 @@
     .new{
     position: absolute;
     bottom: 45px;
-    right: 32px;}
+    right: 32px;color:#f00}
     .time{position: absolute;
     bottom: 14px;
     right: 6px;}
 
     .msg{display: none}
+    .msg.on{display:block}
+    .msg.read .new{display:none}
+
 </style>
 <body>
  <p id="demo"></p>
@@ -91,30 +94,17 @@
 </div>
 <script>
 $( document ).ready(function() {
-      var messageLen = $('.msg').length;
-      for (var i=0;i<messageLen;i++){
-        setInterval(function(i){
-
-            $('.show_'+i).css('display','block');
-            //console.log(i-1)
-
-
-        }, 1000);
-        console.log("======="+i)
-      };
-
+        var timer = setInterval(outer(), 1000);
         function outer() {
           var count = 0;
           var inner = function () {
-            return ++count;
+            if(count>6){ clearInterval(timer); }
+            $('.show_'+count).addClass("on");
+            $('.show_'+parseInt(count-1)).addClass("read");
+             ++count;
           };
-
           return inner;
         }
-        var increase = outer();
-        console.log(increase());
-        console.log(increase());
-
 
 });
 
