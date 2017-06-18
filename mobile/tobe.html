@@ -23,27 +23,27 @@
 .sendNic{position: absolute;
     top: 0;
     left: 65px;}
-    .recievebox .content{margin: 48px 60px 10px 64px;
+    .recievebox .content{margin: 48px 60px 10px 64px;position:relative;
        border-radius: 0px 14px 27px 27px;
        background-color: #dedede;
        padding: 9px;
        min-height: 32px;
        display: inline-block;
-       width: 56%;}
+       width: 50%;}
      .sendbox .content{float: right;
         border-radius: 14px 0 27px 27px;
         background-color: #dedede;
         padding: 9px;
         min-height: 32px;
         display: inline-block;
-        width: 56%;}
+        width: 50%;margin-right: 5%;}
     .new{
     position: absolute;
-    bottom: 45px;
-    right: 32px;color:#f00}
+    bottom: 25px;
+    right: -15px;color:#f00}
     .time{position: absolute;
-    bottom: 14px;
-    right: 6px;}
+    bottom: 2px;
+    right: -79px;}
 
     .msg{display: none}
     .msg.on{display:block}
@@ -55,9 +55,11 @@
 <div class="recievebox msg show_0">
   <p class="sendId">강</p>
   <p class="sendNic">강다솜 매니저님</p>
-  <p class="content">팀장님~ 리브똑똑 캐릭터디자인 메일로 보냈습니다.</p>
-  <span class="new">1</span>
-  <span class="time">오후 10:29</span>
+  <p class="content">
+    <span class="new">1</span>
+    <span class="time">오후 10:29</span>
+    팀장님~ 리브똑똑 캐릭터디자인 메일로 보냈습니다.</p>
+
 </div>
 <div class="sendbox msg show_1">
   <p class="content">네~ 확인해볼게요^^</p>
@@ -65,9 +67,11 @@
 <div class="recievebox msg show_2">
   <p class="sendId">강</p>
   <p class="sendNic">강다솜 매니저님</p>
-  <p class="content">두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지</p>
-  <span class="new">1</span>
-  <span class="time">오후 10:29</span>
+  <p class="content">
+    <span class="new">1</span>
+    <span class="time">오후 10:29</span>
+    두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지두번째보냄메세지</p>
+
 </div>
 <div class="sendbox msg show_3">
   <p class="content">두번째 네~ 확인해볼게요^^</p>
@@ -75,9 +79,12 @@
 <div class="recievebox msg show_4">
   <p class="sendId">강</p>
   <p class="sendNic">강다솜 매니저님</p>
-  <p class="content">세번째 보냄메세지세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지<</p>
-  <span class="new">1</span>
-  <span class="time">오후 10:29</span>
+  <p class="content">
+    <span class="new">1</span>
+    <span class="time">오후 10:29</span>
+  세번째 보냄메세지세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지<세번째 보냄메세지
+  </p>
+
 </div>
 <div class="sendbox msg show_5">
   <p class="content">세번째 네~ 확인해볼게요^^</p>
@@ -85,21 +92,24 @@
 <div class="recievebox msg show_6">
   <p class="sendId">강</p>
   <p class="sendNic">강다솜 매니저님</p>
-  <p class="content">네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지</p>
-  <span class="new">1</span>
-  <span class="time">오후 10:29</span>
+  <p class="content">
+    <span class="new">1</span>
+    <span class="time">오후 10:29</span>
+    네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지네번째 보냄메세지</p>
+
 </div>
 <div class="sendbox msg show_7">
   <p class="content">네번째네~ 확인해볼게요^^</p>
 </div>
 <script>
 $( document ).ready(function() {
-        var timer = setInterval(outer(), 1000);
+        var timer = setInterval(outer(), 2000);
         function outer() {
           var count = 0;
           var inner = function () {
             if(count>6){ clearInterval(timer); }
             $('.show_'+count).addClass("on");
+            $("body").scrollTop(700);
             $('.show_'+parseInt(count-1)).addClass("read");
              ++count;
           };
