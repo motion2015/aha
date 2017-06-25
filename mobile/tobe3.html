@@ -111,13 +111,15 @@
 </div>
 <script>
 $( document ).ready(function() {
-        var timer = setInterval(outer(), 2000);
-        function outer() {
+        var timer = setInterval(outer("show"), 2000);
+        function outer(target) {
           var count = 0;
+
           var inner = function () {
             var stopcount = $('.msg')-2;
+            var _target = $('.'+target+ '_'+count);
             if(count>stopcount){ clearInterval(timer); }
-            $('.show_'+count).addClass("on");
+            _target.addClass("on");
             $("body").scrollTop(700);
             $('.show_'+parseInt(count-1)).addClass("read");
              ++count;
