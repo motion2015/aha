@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>txt_itg_search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+    /* Clearable text inputs */
+    .clearable{
+      position: relative;
+      display: inline-block;
+    }
+    .clearable input[type=text]{
+      padding-right: 24px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .clearable__clear{
+      display: none;
+      position: absolute;
+      right:0; top:0;
+      padding: 0 8px;
+      font-style: normal;
+      font-size: 1.2em;
+      user-select: none;
+      cursor: pointer;
+    }
+    .clearable input::-ms-clear {  /* Remove IE default X */
+      display: none;
+    }
+    </style>
+    <script>
+    $( document ).ready(function() {
+      /**
+       * Clearable text inputs
+       */
+      $(".clearable").each(function() {
+        var $inp = $(this).find("input:text"),
+            $cle = $(this).find(".clearable__clear");
+
+        $inp.on("input", function(){
+          $cle.toggle(!!this.value);
+        });
+        $cle.on("touchstart click", function(e) {
+          e.preventDefault();
+          $inp.val("").trigger("input");
+        });
+
+      });
+});
+
+    </script>
+  </head>
+  <body>
+    <span class="clearable">
+      <input type="text" name="" value="" placeholder="">
+      <i class="clearable__clear">&times;</i>
+    </span>
+
+  </body>
+</html>
