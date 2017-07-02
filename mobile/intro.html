@@ -13,14 +13,33 @@
     .intro p{margin:0;height: 100%;}
     .intro p img{height: 100%;}
     .intro .button{height:auto;position: absolute;top:93.66197183098592%;bottom: 0;left: 0;right: 0;background-color: #12aeb4;}
-    .intro .button a{position: absolute;top:25%;bottom: 7px;left: 0;right: 0;}
+    .intro .button a{position: absolute;top:0;bottom:0;left: 0;right: 0;}
 
 
     /**/
     .textWrap{background-color: #f03;}
     .textWrap span{background-color: #f05;}
+    @media screen and (max-height: 1366px)
+    {
+     .intro .button a{top: 10%;}
+    }
+    @media screen and (max-height: 736px)
+    {
+    .intro .button a{top: 20%;}
+    }
+    @media screen and (max-height: 640px)
+    {
+    .intro .button a{top: 17%;}
+    }
+
 
     </style>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+      alert($( document ).height());
+      //$('.button a').css('top',$('.button').height()/4+"px");
+});
+    </script>
   </head>
   <body>
     <div class="intro">
